@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Carrega o modelo globalmente
-with open('model/tc04.pkl', 'rb') as f:
+with open('tc04.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Rota para fazer previsões
