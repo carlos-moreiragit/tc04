@@ -1,6 +1,10 @@
 import pickle
 import numpy as np
 from flask import Flask, request, jsonify
+import logging
+import time
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 app = Flask(__name__)
 
@@ -12,6 +16,8 @@ with open('tc04.pkl', 'rb') as f:
 @app.route('/predict', methods=['POST'])
 def predict():
 
+    start_time = time.perf_counter()
+
     # data recebe JSON do request body
     data = request.get_json(force=True)
 
@@ -22,6 +28,10 @@ def predict():
 
     # transforma o numpy array em list
     prediction_list = prediction.tolist()
+
+    end_time = time.perf_counter()
+
+    logging.info(f"Tempo de processamento: {end_time - start_time:.4f} segundos")
 
     # retorna JSON
     return jsonify({'prediction': prediction_list})

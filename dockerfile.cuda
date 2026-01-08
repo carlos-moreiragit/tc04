@@ -1,26 +1,28 @@
-# Stage 1: Build the application using the devel image
-# This stage has all necessary headers and compilers
+# Imagem NVIDIA com suprte a GPU
 FROM nvidia/cuda:13.0.1-base-ubuntu24.04 AS base
 
 WORKDIR /app
 
-# Install necessary system dependencies
+# Updade e instalação de dependendias
 RUN apt-get update && apt-get install -y python3 python3-pip build-essential python3-venv
 
+# Criação do ambiente virtual
 RUN python3 -m venv /opt/venv
 
+# Criação das variáveis de ambiente
 ENV PATH="/opt/venv/bin:$PATH"
 ENV XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/lib/cuda/
 
-# Copy only the necessary files and built artifacts from the builder stage
+# Copia os arquivos necessários
 COPY requirements.txt .
 COPY app.py .
 COPY tc04.pkl .
 
-# Install Python dependencies (assuming a requirements.txt file)
+# Instala as dependêicas do projeto
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port the app runs on
+# Expõe a porta
 EXPOSE 5000
 
+# Executa o projeto
 CMD ["python3", "./app.py"]
