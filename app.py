@@ -36,5 +36,9 @@ def predict():
     # retorna JSON
     return jsonify({'prediction': prediction_list})
 
+@app.route('/healthcheck', methods=['GET'])
+def healthcheck():
+    return jsonify({'status': 'ok'})
+
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
