@@ -31,6 +31,8 @@ Os seguintes métodos foram utilizados no tratamento, pré-processamento e valid
 - keras
 - tensorflow
 
+> Nota: Dada a utilidade temporal deste projeto as versões não foram especificadas
+
 ## Executar Localmente
 
 - python -m venv venv
