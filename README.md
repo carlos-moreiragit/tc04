@@ -25,7 +25,7 @@ https://github.com/ranaroussi/yfinance
 docker build -t tc04 .
 docker run --gpus all -it tc04
 
-`É necessário possuir uma GPU NVIDIA
+> Nota: É necessário possuir uma GPU NVIDIA
 
 ## API
 Para utilizar o modelo foi contruida uma API com os seguintes endpoints:
