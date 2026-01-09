@@ -2,7 +2,7 @@
 Este documento contém informações sobre o projeto da quarta fase do curso 5MLT. Este projeto apresenta um modelo preditivo de redes neurais Long Short
 Term Memory (LSTM) especializado na predição do valor das ações do Google.
 
-> Este projeto foi desenvolvido apenas para efeito didático e não deve ser utilizado em ambiente produtivo.
+> Nota: Este projeto foi desenvolvido apenas para efeito didático e não deve ser utilizado em ambiente produtivo.
 
 
 
@@ -20,6 +20,8 @@ Os seguintes métodos foram utilizados no tratamento, pré-processamento e valid
 - Normalização (MinMaxScaler)
 - Reshaping
 - Root Mean Squared Error (RMSE)
+
+> Nota: Mais detalhes no arquivo Tech_Challenge_04.ipynb
 
 # requirements.txt
 
