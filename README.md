@@ -10,6 +10,7 @@ O modelo foi treinato utilizando o Google Colab e salvo no formato pkl.
 https://github.com/ranaroussi/yfinance
 
 # Frameworks
+
 - Python 3.x
 - numpy
 - flask
@@ -17,11 +18,13 @@ https://github.com/ranaroussi/yfinance
 - tensorflow
 
 ## Executar Localmente
+
 - python -m venv venv
 - pip install -r requirements.txt
 - python app.py
 
 ## Executar no Container Docker
+
 docker build -t tc04 .
 docker run --gpus all -it tc04
 
@@ -36,7 +39,7 @@ Para utilizar o modelo foi contruida uma API com os seguintes endpoints:
 |Health Check|http://localhost:5000/healthcheck|
 
 ### /predict (POST)
-Enviar no corpo da requisição, formato raw/JSON uma série temporal contendo o valor de fechamento das ações do Google para obter o valor do próximo fechamento.
+Enviar no corpo da requisição, formato raw/JSON uma série temporal contendo o valor de fechamento das ações do Google para obter o valor do próximo fechamento. Retorna um JSON com o campo prediction contendo o valor previsto.
 
 ### /healthcheck (GET)
 Retorna HTTP 200 OK caso o serviço esteja disponível.
