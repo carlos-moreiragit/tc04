@@ -2,6 +2,10 @@
 Este documento contém informações sobre o projeto da quarta fase do curso 5MLT. Este projeto apresenta um modelo preditivo de redes neurais Long Short
 Term Memory (LSTM) especializado na predição do valor das ações do Google.
 
+> Este projeto foi desenvolvido apenas para efeito didático e não deve ser utilizado em ambiente produtivo.
+
+
+
 ## Treinamento
 O modelo foi treinato utilizando o Google Colab e salvo no formato pkl.
 
@@ -9,7 +13,15 @@ O modelo foi treinato utilizando o Google Colab e salvo no formato pkl.
 
 https://github.com/ranaroussi/yfinance
 
-# Frameworks
+Os seguintes métodos foram utilizados no tratamento, pré-processamento e validação dos dados e treinamento do modelo:
+
+### Valores nulos e distribuição
+### Augmented Dickey-Fuller
+### Normalização (MinMaxScaler)
+### Reshaping
+### Root Mean Squared Error (RMSE)
+
+# requirements.txt
 
 - Python 3.x
 - numpy
