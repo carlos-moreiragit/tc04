@@ -26,6 +26,7 @@ https://github.com/ranaroussi/yfinance
 ## Executar no Container Docker
 
 docker build -t tc04 .
+
 docker run --gpus all -it tc04
 
 > Nota: É necessário possuir uma GPU NVIDIA
