@@ -15,11 +15,11 @@ https://github.com/ranaroussi/yfinance
 
 Os seguintes métodos foram utilizados no tratamento, pré-processamento e validação dos dados e treinamento do modelo:
 
-### Valores nulos e distribuição
-### Augmented Dickey-Fuller
-### Normalização (MinMaxScaler)
-### Reshaping
-### Root Mean Squared Error (RMSE)
+- Valores nulos e distribuição
+- Augmented Dickey-Fuller
+- Normalização (MinMaxScaler)
+- Reshaping
+- Root Mean Squared Error (RMSE)
 
 # requirements.txt
 
