@@ -5,18 +5,9 @@ Term Memory (LSTM) especializado na predição do valor das ações do Google.
 ## Treinamento
 O modelo foi treinato utilizando o Google Colab e salvo no formato pkl.
 
-- Foram utilizados dados hitóricos da API yfinance dos últimos 2 anos:
+- Foram utilizados dados históricos da API yfinance dos últimos 2 anos:
 
 https://github.com/ranaroussi/yfinance
-
-## Utilização
-Para utilizar o modelo foi contruida uma API com os seguintes endpoints:
-
-### /predict (POST)
-Este endpoint recebe uma série temporal contendo o valor de fechamento das ações do Google e retorna o valor previsto para o próximo dia.
-
-### /healthcheck (GET)
-Endpoint utilizado para monitoramento da disponibilidade do serviço.
 
 # Frameworks
 - Python 3.x
@@ -34,8 +25,8 @@ Endpoint utilizado para monitoramento da disponibilidade do serviço.
 docker build -t tc04 .
 docker run --gpus all -it tc04
 
-## Endpoints
-Endpoints da API:
+## API
+Para utilizar o modelo foi contruida uma API com os seguintes endpoints:
 
 |Funçao|Endpoint|
 | ------ | ------- |
